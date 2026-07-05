@@ -1,6 +1,3 @@
-// Banco de dados dos carros cadastrados na loja
-// IMPORTANTE: Para as imagens funcionarem, você deve baixar fotos e salvá-las no GitHub
-// com os mesmos nomes que estão no campo 'imagem' (ex: jetta.jpg, mobi.jpg)
 const carros = [
     { nome: "Jetta 2.5 5 Cilindros (2010)", marca: "volkswagen", preco: "R$ 65.900", km: "60.000 km", imagem: "Jetta.jpg" },
     { nome: "Mobi 1.0 (Zero Km)", marca: "fiat", preco: "R$ 80.000", km: "0 km", imagem: "Mobi.jpg" },
@@ -9,15 +6,13 @@ const carros = [
     { nome: "Corolla XEI", marca: "toyota", preco: "R$ 125.000", km: "45.000 km", imagem: "Corolla.jpg" },
     { nome: "Onix Premier Turbo", marca: "chevrolet", preco: "R$ 89.900", km: "30.000 km", imagem: "Onix.jpg" }
 ];
-];
 
 const vitrine = document.getElementById('vitrine');
 const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
 
-// Função para mostrar os carros na tela
 function renderizarCarros(listaFiltro) {
-    vitrine.innerHTML = ""; // Limpa a vitrine antes de desenhar
+    vitrine.innerHTML = ""; 
     
     if (listaFiltro.length === 0) {
         vitrine.innerHTML = `<p style="grid-column: 1/-1; color: #ef4444; font-size: 18px;">Nenhum veículo encontrado para essa marca.</p>`;
@@ -40,23 +35,19 @@ function renderizarCarros(listaFiltro) {
     });
 }
 
-// Função para filtrar os carros pela marca digitada
 function filtrarMarcas() {
     const termo = searchInput.value.toLowerCase().trim();
-    
     if (termo === "") {
-        renderizarCarros(carros); // Se tiver vazio, mostra todos
+        renderizarCarros(carros);
     } else {
         const carrosFiltrados = carros.filter(carro => carro.marca.includes(termo));
         renderizarCarros(carrosFiltrados);
     }
 }
 
-// Executa os filtros nas ações do usuário
 searchBtn.addEventListener('click', filtrarMarcas);
 searchInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') filtrarMarcas();
 });
 
-// Mostra todos os carros assim que a página carrega pela primeira vez
 renderizarCarros(carros);
