@@ -1,4 +1,87 @@
-/* Container da Imagem do Carro */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    border-bottom: 2px solid #334155;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #38bdf8;
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin-top: 5px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+}
+
+input {
+    flex: 1;
+    padding: 14px;
+    border: 2px solid #334155;
+    border-radius: 8px;
+    background-color: #1e293b;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus { border-color: #38bdf8; }
+
+#search-btn {
+    padding: 14px 24px;
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.vitrine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.car-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
 .car-img-container {
     width: 100%;
     height: 180px;
@@ -12,18 +95,13 @@
 .car-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
-    transition: transform 0.3s;
-}
-
-.car-card:hover .car-img {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    object-fit: cover;
 }
 
 .car-card h3 {
     margin: 15px 10px 5px 10px;
     font-size: 1.2rem;
-    height: 50px; /* Mantém a altura dos títulos padrão */
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
