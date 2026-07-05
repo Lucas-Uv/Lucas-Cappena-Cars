@@ -2,12 +2,13 @@
 // IMPORTANTE: Para as imagens funcionarem, você deve baixar fotos e salvá-las no GitHub
 // com os mesmos nomes que estão no campo 'imagem' (ex: jetta.jpg, mobi.jpg)
 const carros = [
-    { nome: "Jetta 2.5 5 Cilindros (2010)", marca: "volkswagen", preco: "R$ 65.900", km: "60.000 km", imagem: "jetta.jpg" },
-    { nome: "Mobi 1.0 (Zero Km)", marca: "fiat", preco: "R$ 80.000", km: "0 km", imagem: "mobi.jpg" },
-    { nome: "911 Carrera GTS", marca: "porsche", preco: "R$ 850.000", km: "12.000 km", imagem: "porsche.jpg" },
-    { nome: "Civic Type R", marca: "honda", preco: "R$ 360.000", km: "5.000 km", imagem: "civic.jpg" },
-    { nome: "Corolla XEI", marca: "toyota", preco: "R$ 125.000", km: "45.000 km", imagem: "corolla.jpg" },
-    { nome: "Onix Premier Turbo", marca: "chevrolet", preco: "R$ 89.900", km: "30.000 km", imagem: "onix.jpg" }
+    { nome: "Jetta 2.5 5 Cilindros (2010)", marca: "volkswagen", preco: "R$ 65.900", km: "60.000 km", imagem: "Jetta.jpg" },
+    { nome: "Mobi 1.0 (Zero Km)", marca: "fiat", preco: "R$ 80.000", km: "0 km", imagem: "Mobi.jpg" },
+    { nome: "911 Carrera GTS", marca: "porsche", preco: "R$ 850.000", km: "12.000 km", imagem: "Porsche.jpg" },
+    { nome: "Civic Type R", marca: "honda", preco: "R$ 360.000", km: "5.000 km", imagem: "Civic.jpg" },
+    { nome: "Corolla XEI", marca: "toyota", preco: "R$ 125.000", km: "45.000 km", imagem: "Corolla.jpg" },
+    { nome: "Onix Premier Turbo", marca: "chevrolet", preco: "R$ 89.900", km: "30.000 km", imagem: "Onix.jpg" }
+];
 ];
 
 const vitrine = document.getElementById('vitrine');
